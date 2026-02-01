@@ -48,7 +48,7 @@ mvn clean test
   - `release/*`
 
 ## Documentation
-- [Installation Guide](docs/installation-guide.md)
-- [User Manual](docs/user-manual.md)
-- [Troubleshooting Guide](docs/troubleshooting-guide.md)
+- [Installation Guide](docs/InstallationGuide.md)
+- [User Manual](docs//UserManual.md)
+- [Troubleshooting Guide](docs/TroubleshootingGuide.md)
 
