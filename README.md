@@ -15,10 +15,40 @@ This repository contains a Java Maven project integrated with Jenkins for Contin
 
 ## How to Run Locally
 ### Requirements
-- Java 21
+- Java (JDK 11+ recommended, Java 21 supported)
 - Maven
 - Git
+- Jenkins LTS
 
-### Build and Test
+### 1) Clone Repository
+```bash
+git clone https://github.com/Aanya2175/CILabProject.git
+cd CILabProject
+```
+
+### 2) Build and Run Tests
 ```bash
 mvn clean test
+```
+
+## Jenkins Setup Summary
+
+### Job 1: Freestyle Project
+- GitHub configured as SCM
+- Triggers: Poll SCM and/or GitHub webhook
+- Build steps: `mvn clean test` + optional script execution from `/scripts`
+- Post-build: Archive artifacts + Publish JUnit test reports
+
+### Job 2: Multibranch Pipeline
+- Automatic branch discovery from GitHub
+- Pipeline execution using `Jenkinsfile`
+- Branch-specific behaviour for:
+  - `main`
+  - `feature/*`
+  - `release/*`
+
+## Documentation
+- [Installation Guide](docs/installation-guide.md)
+- [User Manual](docs/user-manual.md)
+- [Troubleshooting Guide](docs/troubleshooting-guide.md)
+
